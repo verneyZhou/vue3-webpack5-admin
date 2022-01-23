@@ -1,0 +1,28 @@
+{
+    "presets": [
+      ["@babel/preset-env", {
+        "modules": "commonjs",
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"],
+          "node": "current"
+        }
+      }],
+      [
+        "@babel/preset-typescript", // 引用Typescript插件
+        {
+          "allExtensions": true // 支持所有文件扩展名，否则在vue文件中使用ts会报错
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime", // polyfill
+        {
+          "corejs": 3 // 指定 corejs 版本 
+        }
+      ],
+      "@babel/proposal-class-properties", // 支持 ts 类的写法
+      "@babel/proposal-object-rest-spread" // 支持三点展开符
+    ]
+  }
+  

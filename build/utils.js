@@ -21,7 +21,7 @@ module.exports = {
 				url = '/' + url;
 			}
 		} else {
-			url = './';
+			url = '.';
 		}
 		return url;
 	}
